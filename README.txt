@@ -1,11 +1,25 @@
 #In this container image,
+#The liboqs provider that enables PQ crypto algorithm is activated by default.
+#You can use this command to test it: 
 
-#The liboqs provider that enables PQ crypto algorithm is activated by default. You can use this command to test it: openssl list -providers
+openssl list -providers
+
 #Check the script.sh file to see how openssl keys are generated.
-#crypto policies is updated with the TEST-PQ sub policy. To check if, you can execute this command: update-crypto-policies --show
-#nginx.conf file is updated to enable TLS settings on port 443. To test it, use the following command: openssl s_client -connect localhost:443 -tls1_3
-#To test OpenSSL with curl, use the following command: curl --cacert root.crt https://localhost:443/⁠
-#To test the PQ algorithm with the oqs test server, use the folowing command: openssl s_client -connect test.openquantumsafe.org:6041 -trace
+#crypto policies is updated with the TEST-PQ sub policy. To check if, you can execute this command: 
+
+update-crypto-policies --show
+
+#nginx.conf file is updated to enable TLS settings on port 443. To test it, use the following command:
+openssl s_client -connect localhost:443 -tls1_3
+
+#To test OpenSSL with curl, use the following command: 
+
+curl --cacert root.crt https://localhost:443/
+⁠
+#To test the PQ algorithm with the oqs test server, use the folowing command:
+
+openssl s_client -connect test.openquantumsafe.org:6041 -trace
+
 #Useful podman commands:
 
 podman image list
