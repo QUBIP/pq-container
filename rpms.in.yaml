@@ -1,0 +1,12 @@
+contentOrigin:
+  repos:
+    - repoid: fedora
+      baseurl: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/$basearch/os/
+    - repoid: fedora-debug
+      baseurl: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/$basearch/debug/tree
+    - repoid: fedora-source
+      baseurl: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree
+packages:
+  - liboqs
+  - openssl
+  - oqsprovider
