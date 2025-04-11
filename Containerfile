@@ -1,5 +1,5 @@
 # Use fully qualified name for rpm-manager
-FROM quay.io/fedora/fedora:42
+FROM quay.io/fedora/fedora:43
 
 COPY setup.sh .
 RUN bash setup.sh
