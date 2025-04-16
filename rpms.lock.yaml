@@ -4,44 +4,51 @@ lockfileVendor: redhat
 arches:
 - arch: x86_64
   packages:
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/l/liboqs-0.11.0-2.fc42.x86_64.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/l/liboqs-0.12.0-4.fc43.x86_64.rpm
     repoid: fedora
-    size: 264611
-    checksum: sha256:90deec6ce5fd8477607e73de020b545258b394f29df6289d058cd505d3213ab0
+    size: 181260
+    checksum: sha256:a80f56444c07887e2cfec76b9d056a4995bd90c8a67a2a2bc5f057c0bc7684cd
     name: liboqs
-    evr: 0.11.0-2.fc42
-    sourcerpm: liboqs-0.11.0-2.fc42.src.rpm
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/openssl-3.2.2-8.fc42.x86_64.rpm
+    evr: 0.12.0-4.fc43
+    sourcerpm: liboqs-0.12.0-4.fc43.src.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/openssl-3.5.0-2.fc43.x86_64.rpm
     repoid: fedora
-    size: 1169505
-    checksum: sha256:be8b623b6437ed7a75e4287c3a5f6cf2f627f4b5543ad7dc08725a89923bbf40
+    size: 1289267
+    checksum: sha256:44238cda93808505e6d04f485f63c69b246e1100542162a5ee62dd6342d3a1c1
     name: openssl
-    evr: 1:3.2.2-8.fc42
-    sourcerpm: openssl-3.2.2-8.fc42.src.rpm
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/oqsprovider-0.6.0-4.fc42.x86_64.rpm
+    evr: 1:3.5.0-2.fc43
+    sourcerpm: openssl-3.5.0-2.fc43.src.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/openssl-libs-3.5.0-2.fc43.x86_64.rpm
     repoid: fedora
-    size: 183438
-    checksum: sha256:a486af7d9e5b0b716c312e28f6893fd8f87e8d4d945c35cb8e3b9c91a8d5407a
+    size: 2734148
+    checksum: sha256:1c31b0b7a6b4ff3dfea7e9273746cd8d6351378807844544543062175c9f4d33
+    name: openssl-libs
+    evr: 1:3.5.0-2.fc43
+    sourcerpm: openssl-3.5.0-2.fc43.src.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/oqsprovider-0.8.0-3.fc42.x86_64.rpm
+    repoid: fedora
+    size: 174949
+    checksum: sha256:b6fec32e95f18726de72217c0b8ad2242899be77ce0e4408597d250e6f5a1414
     name: oqsprovider
-    evr: 0.6.0-4.fc42
-    sourcerpm: oqsprovider-0.6.0-4.fc42.src.rpm
+    evr: 0.8.0-3.fc42
+    sourcerpm: oqsprovider-0.8.0-3.fc42.src.rpm
   source:
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/l/liboqs-0.11.0-2.fc42.src.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/l/liboqs-0.12.0-4.fc43.src.rpm
     repoid: fedora-source
-    size: 8103286
-    checksum: sha256:f8a6d7e1b350efb6e63280fa06f51d46eb3f923790bc65816067426ab9e9582f
+    size: 7911991
+    checksum: sha256:0fc3eee4da3d794e281707e61eb8855e785d85acbefea2df73d19a3a6a8ac885
     name: liboqs
-    evr: 0.11.0-2.fc42
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/openssl-3.2.2-8.fc42.src.rpm
+    evr: 0.12.0-4.fc43
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/openssl-3.5.0-2.fc43.src.rpm
     repoid: fedora-source
-    size: 18058344
-    checksum: sha256:b175fadb77614ca74ab2d25aba0a0e35c689cfd12e77c25fca896db319d32c0c
+    size: 53376071
+    checksum: sha256:3c52be328d585a26b050677c249a503cd51d53f0d50c31c5c85e8cc60749a0bc
     name: openssl
-    evr: 1:3.2.2-8.fc42
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/oqsprovider-0.6.0-4.fc42.src.rpm
+    evr: 1:3.5.0-2.fc43
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/oqsprovider-0.8.0-3.fc42.src.rpm
     repoid: fedora-source
-    size: 210312
-    checksum: sha256:d10b0df4936611a5a2c75d518b607773aadbe73fb97b2fd62bb99ed6acc90726
+    size: 258070
+    checksum: sha256:1b67e2ff492c304ac1c6d382f047aec47b69810ade17d6bec00269a0431dc472
     name: oqsprovider
-    evr: 0.6.0-4.fc42
+    evr: 0.8.0-3.fc42
   module_metadata: []
