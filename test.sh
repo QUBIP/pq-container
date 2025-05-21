@@ -46,15 +46,10 @@ function run_s_client_and_grep {
     local host=$2
     local port=$3
     local patterns=$4
-    local regex_flag=$5
-    local modify=$6
     rlRun -s "./client.expect openssl s_client ${group} -connect ${host}:${port}" 0 "Run client"
-    if [ ! -z $modify ]; then
-        sed -i ':a;N;$!ba;s/using\r\n/using /g' $rlRun_LOG
-        fi
     local IFS=';'
     for pattern in ${patterns[@]}; do
-        rlAssertGrep "$pattern" $rlRun_LOG $regex_flag
+        rlAssertGrep "$pattern" $rlRun_LOG
     done
 }
 
@@ -71,29 +66,29 @@ rlJournalStart
 
     rlPhaseStartTest "TEST 1: Default connection with X25519MLKEM768"
         start_s_server $KEY $CRT 4433
-        run_s_client_and_grep "" "localhost" "4433" "Negotiated TLS1.3 group: X25519MLKEM768" "" ""
+        run_s_client_and_grep "" "localhost" "4433" "Negotiated TLS1.3 group: X25519MLKEM768"
         stop_s_server
     rlPhaseEnd
 
     rlPhaseStartTest "TEST 2: Specifying groups: SecP256r1MLKEM768 and X25519MLKEM768"
         start_s_server $KEY $CRT 4433
         rlLogInfo "Specify the group SecP256r1MLKEM768"
-        run_s_client_and_grep "-groups SecP256r1MLKEM768" "localhost" "4433" "Shared groups: SecP256r1MLKEM768" "" ""
+        run_s_client_and_grep "-groups SecP256r1MLKEM768" "localhost" "4433" "Negotiated TLS1.3 group: SecP256r1MLKEM768"
         rlLogInfo "Specify the group X25519MLKEM768"
-        run_s_client_and_grep "-groups X25519MLKEM768" "localhost" "4433" "Shared groups: X25519MLKEM768" "" ""
+        run_s_client_and_grep "-groups X25519MLKEM768" "localhost" "4433" "Negotiated TLS1.3 group: X25519MLKEM768"
         stop_s_server
     rlPhaseEnd
 
     rlPhaseStartTest "TEST 3: Hybrid ML-KEM - TLS connection with oqs test server"
         rlLogInfo "Connection with SecP256r1MLKEM768"
-        run_s_client_and_grep "" "test.openquantumsafe.org" "6001" 'CONNECTED\(00000003\);(Successfully connected using )([a-z]|[A-Z]|[0-9])*(-)*SecP256r1MLKEM768' "-P" "using"
+        run_s_client_and_grep "" "test.openquantumsafe.org" "6001" "CONNECTED(00000003);Negotiated TLS1.3 group: SecP256r1MLKEM768"
         rlLogInfo "Connection with X25519MLKEM768"
-        run_s_client_and_grep "" "test.openquantumsafe.org" "6002" 'CONNECTED\(00000003\);(Successfully connected using )([a-z]|[A-Z]|[0-9])*(-)*X25519MLKEM768' "-P" "using"
+        run_s_client_and_grep "" "test.openquantumsafe.org" "6002" "CONNECTED(00000003);Negotiated TLS1.3 group: X25519MLKEM768"
     rlPhaseEnd
 
     rlPhaseStartTest "TEST 4: Tests with the nginx server"
         rlRun "nginx"
-        run_s_client_and_grep "" "localhost" "443" "CONNECTED(00000003);Negotiated TLS1.3 group: X25519MLKEM768" "" ""
+        run_s_client_and_grep "" "localhost" "443" "CONNECTED(00000003);Negotiated TLS1.3 group: X25519MLKEM768"
     rlPhaseEnd
 
     rlPhaseStartTest "TEST 5: Tests with curl"
