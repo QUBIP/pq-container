@@ -2,7 +2,7 @@
 
 set -exo pipefail
 
-dnf upgrade --refresh -y && dnf install -y pgrep vim nginx curl openssl liboqs oqsprovider crypto-policies-scripts tcpdump sed
+dnf upgrade --refresh -y && dnf install -y pgrep vim nginx curl openssl liboqs oqsprovider crypto-policies-scripts tcpdump sed beakerlib
 
 update-crypto-policies --set DEFAULT:TEST-PQ
 
