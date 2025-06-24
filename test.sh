@@ -83,7 +83,7 @@ rlJournalStart
         rlLogInfo "Connection with SecP256r1MLKEM768"
         run_s_client_and_grep "" "test.openquantumsafe.org" "6001" "CONNECTED(00000003);Negotiated TLS1.3 group: SecP256r1MLKEM768"
         rlLogInfo "Connection with X25519MLKEM768"
-        run_s_client_and_grep "" "test.openquantumsafe.org" "6002" "CONNECTED(00000003);Negotiated TLS1.3 group: X25519MLKEM768"
+        run_s_client_and_grep "" "test.openquantumsafe.org" "6003" "CONNECTED(00000003);Negotiated TLS1.3 group: X25519MLKEM768"
     rlPhaseEnd
 
     rlPhaseStartTest "TEST 4: Tests with the nginx server"
