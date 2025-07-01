@@ -6,7 +6,7 @@
 . /usr/share/beakerlib/beakerlib.sh || exit 1
 
 POLICY="$(update-crypto-policies --show)"
-PACKAGES="crypto-policies-scripts liboqs openssl oqsprovider curl expect"
+PACKAGES="crypto-policies-scripts liboqs openssl curl expect"
 KEY="root.key"
 CRT="root.crt"
 SERVER_TXT="server_pid.txt"
@@ -59,8 +59,6 @@ rlJournalStart
         rlAssertRpm --all $PACKAGES
         rlRun -s "update-crypto-policies --show"
         rlAssertGrep "TEST-PQ" $rlRun_LOG
-        rlRun -s "openssl list -providers"
-        rlAssertGrep "name: OpenSSL OQS Provider" $rlRun_LOG
         rlRun "touch ${SERVER_TXT}"
     rlPhaseEnd
 
@@ -96,7 +94,7 @@ rlJournalStart
     rlPhaseEnd
 
     rlPhaseStartTest "TEST 6: List the supported ML-KEM algorithms"
-        rlRun -s "openssl list -kem-algorithms -provider oqsprovider"
+        rlRun -s "openssl list -kem-algorithms"
         rlAssertGrep "SecP256r1MLKEM768" $rlRun_LOG
         rlAssertGrep "X25519MLKEM768" $rlRun_LOG
     rlPhaseEnd
