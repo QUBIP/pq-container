@@ -4,6 +4,6 @@ FROM quay.io/fedora/fedora:rawhide
 COPY setup.sh .
 RUN bash setup.sh
 
-COPY test.sh .
+COPY client.expect test.sh .
 
 CMD ["/bin/bash"]
