@@ -62,9 +62,9 @@ rlJournalStart
         rlRun "touch ${SERVER_TXT}"
     rlPhaseEnd
 
-    rlPhaseStartTest "TEST 1: Default connection with X25519MLKEM768"
+    rlPhaseStartTest "TEST 1: Failing test with wrong group"
         start_s_server $KEY $CRT 4433
-        run_s_client_and_grep "" "localhost" "4433" "Negotiated TLS1.3 group: X25519MLKEM768"
+        run_s_client_and_grep "" "localhost" "4433" "Negotiated TLS1.3 group: SecP256r1MLKEM768"
         stop_s_server
     rlPhaseEnd
 
