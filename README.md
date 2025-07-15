@@ -13,7 +13,7 @@ Desktop](https://podman-desktop.io/).
 To download the pre-built container image using `podman`, use
 
 ```sh
-podman pull quay.io/qubip/pq-container
+podman pull quay.io/qubip/pq-container:latest
 ```
 
 To run the container, use
@@ -38,6 +38,11 @@ openssl list -providers
 
 will list the OpenSSL OQS Provider, which uses liboqs to offer post-quantum
 cryptography for OpenSSL.
+Note: oqsprovider cannot be installed in Fedora versions that are greater than 42.
+F43 (and rawhide) has OpenSSL 3.5 which supports native implementation of PQ algorithms.
+Therefore oqsprovider is not needed anymore.
+However, it doesn't yet support hybrid signatures.
+Since QUBIP requires that we support hybrid signatures, we are still using F42.
 
 ### Showing the active system-wide cryptographic policy
 
