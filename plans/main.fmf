@@ -3,9 +3,15 @@ provision:
     how: container
 discover:
     how: shell
-execute:
-    how: tmt
+    tests:
+        - name: /default
+          framework: beakerlib
+          test:
+            bash test.sh
+prepare:
+    how: shell
     script: |
         cat /etc/fedora-release
         bash setup.sh
-        bash test.sh
+execute:
+    how: tmt
