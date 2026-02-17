@@ -7,58 +7,58 @@ arches:
   - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/aarch64/os/Packages/l/liboqs-0.12.0-6.fc44.aarch64.rpm
     repoid: fedora
     size: 80844
-    checksum: sha256:e2c804311a68e341b62af43fd08c53cf3251f317ded32d2e2359dc60d63dd218
+    checksum: sha256:0af35798fc578834b685a758ccb0265c4797ecae19685e5c5e3e94167056ad4f
     name: liboqs
     evr: 0.12.0-6.fc44
     sourcerpm: liboqs-0.12.0-6.fc44.src.rpm
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/aarch64/os/Packages/o/openssl-3.5.4-2.fc44.aarch64.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/aarch64/os/Packages/o/openssl-3.5.5-1.fc44.aarch64.rpm
     repoid: fedora
-    size: 1265493
-    checksum: sha256:3570bbd1b8144f234484687199bb3197fa2e4ab239ea46d7ca5d702c8b38197a
+    size: 1268111
+    checksum: sha256:dc7c07742ea3adb4c3d8eab5bc52d97d5cf8151b4df0b6a209abbb5826a2f9d5
     name: openssl
-    evr: 1:3.5.4-2.fc44
-    sourcerpm: openssl-3.5.4-2.fc44.src.rpm
+    evr: 1:3.5.5-1.fc44
+    sourcerpm: openssl-3.5.5-1.fc44.src.rpm
   source:
   - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/l/liboqs-0.12.0-6.fc44.src.rpm
     repoid: fedora-source
     size: 7912017
-    checksum: sha256:d58aaa651f22c5dd4a4f371e43a167258b671f843ece40fef4fb57b0eb280f3c
+    checksum: sha256:ff501defeb1ff7480d873c104c645fdcd33dea67f199c5eb180b1307531a6b5b
     name: liboqs
     evr: 0.12.0-6.fc44
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/openssl-3.5.4-2.fc44.src.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/openssl-3.5.5-1.fc44.src.rpm
     repoid: fedora-source
-    size: 53445071
-    checksum: sha256:163edfa1d38e647bcb5c6d07f83a300194862cc8a932247edfbf70a3e340d9cf
+    size: 53356759
+    checksum: sha256:557798ec9810849cc9ed010781ad300c933f425d03b183faee7d14cd69641fee
     name: openssl
-    evr: 1:3.5.4-2.fc44
+    evr: 1:3.5.5-1.fc44
   module_metadata: []
 - arch: x86_64
   packages:
   - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/l/liboqs-0.12.0-6.fc44.x86_64.rpm
     repoid: fedora
     size: 183342
-    checksum: sha256:d1b7e92ae233e9df1835a223405bde7fa161ce75005a30580356696a9ee6ddf2
+    checksum: sha256:6dd00ec25fb183d59d57a881bad738f0d8e9d9f0ff41877da32d34a42f83e87e
     name: liboqs
     evr: 0.12.0-6.fc44
     sourcerpm: liboqs-0.12.0-6.fc44.src.rpm
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/openssl-3.5.4-2.fc44.x86_64.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/x86_64/os/Packages/o/openssl-3.5.5-1.fc44.x86_64.rpm
     repoid: fedora
-    size: 1293910
-    checksum: sha256:bb5c1296e7892c8112365caf6f9c7898a11124ceb41bb9f045c5e0087fb33e86
+    size: 1296215
+    checksum: sha256:5a631a62f3c279bd9ac8f87a1591561324b0c55fe9b6c90ad9f63b00db60db06
     name: openssl
-    evr: 1:3.5.4-2.fc44
-    sourcerpm: openssl-3.5.4-2.fc44.src.rpm
+    evr: 1:3.5.5-1.fc44
+    sourcerpm: openssl-3.5.5-1.fc44.src.rpm
   source:
   - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/l/liboqs-0.12.0-6.fc44.src.rpm
     repoid: fedora-source
     size: 7912017
-    checksum: sha256:d58aaa651f22c5dd4a4f371e43a167258b671f843ece40fef4fb57b0eb280f3c
+    checksum: sha256:ff501defeb1ff7480d873c104c645fdcd33dea67f199c5eb180b1307531a6b5b
     name: liboqs
     evr: 0.12.0-6.fc44
-  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/openssl-3.5.4-2.fc44.src.rpm
+  - url: https://kojipkgs.fedoraproject.org/compose/rawhide/latest-Fedora-Rawhide/compose/Everything/source/tree/Packages/o/openssl-3.5.5-1.fc44.src.rpm
     repoid: fedora-source
-    size: 53445071
-    checksum: sha256:163edfa1d38e647bcb5c6d07f83a300194862cc8a932247edfbf70a3e340d9cf
+    size: 53356759
+    checksum: sha256:557798ec9810849cc9ed010781ad300c933f425d03b183faee7d14cd69641fee
     name: openssl
-    evr: 1:3.5.4-2.fc44
+    evr: 1:3.5.5-1.fc44
   module_metadata: []
